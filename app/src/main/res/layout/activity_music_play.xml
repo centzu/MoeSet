@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPink">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="play music"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_music_album"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="30dp"
+            android:src="@drawable/album" />
+
+        <TextView
+            android:id="@+id/tv_play_music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_music_album"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/iv_music_album"
+            android:lines="2"
+            android:text="111"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_play_music_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_play_music_name"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/iv_music_album"
+            android:text="222" />
+
+        <com.dd.CircularProgressButton
+            android:id="@+id/btn_download_music"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/iv_music_album"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/iv_music_album"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            app:cpb_cornerRadius="15dp"
+            app:cpb_textComplete="compelte"
+            app:cpb_textError="error"
+            app:cpb_textIdle="下载" />
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/sb_play_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:max="100" />
+
+    <Button
+        android:id="@+id/bt_play_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:drawable/ic_media_play" />
+
+</LinearLayout>

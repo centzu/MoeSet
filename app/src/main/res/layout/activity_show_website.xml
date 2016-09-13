@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPink">
+
+        <Button
+            android:id="@+id/bt_news_website_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="website"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_webprogress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:max="100"
+        android:progress="1" />
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:id="@+id/rl_progressbar">-->
+    <!--<ProgressBar-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:id="@+id/pb_loading"-->
+    <!--/>-->
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="少女祈祷中..."&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_below="@id/pb_loading"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_centerHorizontal="true"/>&ndash;&gt;-->
+    <!--</RelativeLayout>-->
+
+
+    <WebView
+        android:id="@+id/wv_news"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:focusable="false" />
+</LinearLayout>
