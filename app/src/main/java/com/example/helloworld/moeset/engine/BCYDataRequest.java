@@ -62,6 +62,7 @@ public class BCYDataRequest {
                 mCookies=responseHeader.get("Set-Cookie");
                 saveBcyCookies();
                 return super.parseNetworkResponse(response);
+
             }
         };
     }
