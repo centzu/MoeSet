@@ -19,11 +19,18 @@ android {
     }
 }
 
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
-    compile 'com.google.code.gson:gson:2.7'
-    compile project(':circle-progress-button-library')
-}
+    dependencies {
+        compile fileTree(include: ['*.jar'], dir: 'libs')
+        testCompile 'junit:junit:4.12'
+        compile 'com.android.support:appcompat-v7:23.2.1'
+        compile project(':circle-progress-button-library')
+        compile 'com.google.code.gson:gson:2.7'
+        compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    }
+
+    allprojects {
+        repositories {
+            mavenCentral()
+            jcenter()
+        }
+    }

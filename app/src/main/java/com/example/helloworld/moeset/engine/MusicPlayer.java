@@ -81,7 +81,7 @@ public class MusicPlayer implements MediaPlayer.OnPreparedListener {
         mMediaPlayer.pause();
     }
 
-    public void stop() {
+    public void stopAndrelease() {
         if (mMediaPlayer != null) {
             mMediaPlayer.stop();
             mMediaPlayer.release();

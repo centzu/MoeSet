@@ -11,7 +11,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 
 import com.example.helloworld.moeset.R;
 
@@ -114,9 +113,9 @@ public class ShowWebsiteActivity extends Activity {
         mBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (String s : mUrlStack) {
-                    System.out.println(s);
-                }
+//                for (String s : mUrlStack) {
+//                    System.out.println(s);
+//                }
                 if (mUrlStack.size() == 1 || mUrlStack.empty() || mUrlStack.peek().equals(mUrl)) {
                     ShowWebsiteActivity.this.finish();
                 } else {
