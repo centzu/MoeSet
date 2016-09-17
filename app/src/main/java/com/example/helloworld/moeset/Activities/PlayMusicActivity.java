@@ -63,7 +63,6 @@ public class PlayMusicActivity extends Activity implements MediaPlayer.OnComplet
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music_play);
         initView();
-
         //mbtPlayMusic.performClick();
     }
 
