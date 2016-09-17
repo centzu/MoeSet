@@ -59,6 +59,7 @@ public class PlayMusicActivity extends Activity implements MediaPlayer.OnComplet
     private boolean isLoading=false;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
