@@ -2,7 +2,6 @@ package com.example.helloworld.moeset.Service;
 
 import android.app.Service;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
@@ -10,7 +9,6 @@ import android.util.Log;
 import com.example.helloworld.moeset.engine.MusicPlayer;
 
 import java.io.IOException;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -81,7 +79,7 @@ public class MusicPlayerService extends Service {
     @Override
     public void onDestroy() {
         if(mMusicPlayer!=null)
-            mMusicPlayer.stop();
+            mMusicPlayer.stopAndrelease();
         super.onDestroy();
 
     }

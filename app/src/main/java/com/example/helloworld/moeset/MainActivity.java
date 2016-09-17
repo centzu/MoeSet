@@ -1,36 +1,25 @@
 package com.example.helloworld.moeset;
 
-import android.app.Activity;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTabHost;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
-import com.example.helloworld.moeset.Beans.Website;
 import com.example.helloworld.moeset.Fragments.MusicFragment;
 import com.example.helloworld.moeset.Fragments.NewsFragment;
 import com.example.helloworld.moeset.Fragments.NovelFragment;
+import com.example.helloworld.moeset.engine.BCYDataRequest;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.example.helloworld.moeset.R.id.iv_website_icon;
 
 public class MainActivity extends FragmentActivity implements ViewPager.OnPageChangeListener {
     private ViewPager mViewPager;
@@ -48,6 +37,9 @@ public class MainActivity extends FragmentActivity implements ViewPager.OnPageCh
     }
 
     private void initView() {
+        BCYDataRequest r=new BCYDataRequest(this);
+        r.getCookies();
+       // r.sendCookieAndLogin();
         NewsFragment newsFragment = new NewsFragment();
         MusicFragment musicFragment = new MusicFragment();
         NovelFragment novelFragment = new NovelFragment();
